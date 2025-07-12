@@ -11,7 +11,7 @@ import Income from "./pages/dashboard/Income";
 import Expence from "./pages/dashboard/Expence"
 import UserProvider from "./context/userContext";
 import {Toaster} from "react-hot-toast"
-import LandingPage from "./pages/LadingPage/LandingPage"
+import LandingPage from "./pages/LandingPage/LandingPage"
 
 const App = () => {
   return (

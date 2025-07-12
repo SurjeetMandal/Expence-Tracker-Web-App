@@ -41,3 +41,7 @@
 .add-btn-fill{
     @apply text-white bg-primary; 
 }
+
+.padding{
+    @apply px-[12px] md:px-[60px] lg:px-[80px] 
+}

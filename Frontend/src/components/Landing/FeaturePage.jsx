@@ -1,18 +1,33 @@
-import React from 'react'
-import { LuArrowBigRight } from "react-icons/lu"
+import hero_img from "/Frame.png"
+import vector from "/Vector.png"
+import hero_design_1 from "/24.png"
+import hero_design_2 from "/62.png"
+import { useNavigate } from "react-router-dom"
 
 const FeaturePage = () => {
+  const navigate = useNavigate()
+
+  const handleClickSigin = () => {
+    navigate("/signup")
+  }
+
   return (
-    <div className='flex flex-col justify-center px-4 md:px-28 items-center md:auto'>
-      <p className='bg-green-200 border mt-20 border-green-300 px-5 py-1 rounded-full text-sm text-green-800'># Save More</p>
-      <p className='text-4xl font-semibold mt-4 text-center'><span className='text-primary'>Track</span> Smart. <span className='text-primary'>Spend</span> Smarter.</p>
-      <p className='mt-2 font-base text-gray-500 max-w-[320px] md:max-w-[700px] text-center'>Your all-in-one personal finance tracker — control your budget, visualize your spending, and build better financial habits.</p>
-      <ul className='flex gap-4 mt-6 md:mt-4 md:flex-row flex-wrap justify-center'>
-        <li className='flex items-center font-medium text-sm bg-primary text-purple-100 rounded-full px-4 py-1'><LuArrowBigRight />Real-Time Insights</li>
-        <li className='flex items-center font-medium text-sm bg-primary text-purple-100 rounded-full px-4 py-1'><LuArrowBigRight />Smarter Budgeting</li>
-        <li className='flex items-center font-medium text-sm bg-primary text-purple-100 rounded-full px-4 py-1'><LuArrowBigRight />Secure & Private</li>
-      </ul>
-      <img src="image 14.png" alt="" className='md:w-3/4 mt-14'/>
+    <div className="bg-[#e8e7fd] w-[100%] h-screen relative">
+
+      <img src={hero_design_1} alt="" className="absolute top-110 w-7 md:w-auto -left-4 md:left-0"/>
+      <img src={hero_design_2} alt="" className="absolute top-94 md:top-70 md:right-0 -right-1 w-7 md:w-auto"/>
+
+      <div className="padding flex h-full items-center flex-col md:flex-row md:gap-8 lg:gap-0">
+        <div className="md:w-1/2 flex justify-between">
+          <img src={hero_img} alt="" className="lg:w-3/4 mt-14 md:mt-0"/>
+        </div>
+
+        <div className="md:w-1/2 flex flex-col mb-12 lg:mb-28">
+          <p className="text-4xl lg:text-6xl font-semibold lg:leading-17">Managing investment<br className="hidden lg:block"/> has never been <div className="inline-block">easier<img src={vector} className="hidden md:block w-[12vw]" alt=""/></div></p>
+          <p className="text-gray-600 text-base mt-6">Investment management refers to the handling of financial assets and other investments—not only buying and selling them.</p>
+          <button onClick={handleClickSigin} className="mt-6 self-start bg-primary px-6 py-2 rounded-sm text-base text-white  hover:bg-purple-200 hover:text-primary transition-all cursor-pointer">Let’s Get a Rich</button>
+        </div>
+      </div>
     </div>
   )
 }
